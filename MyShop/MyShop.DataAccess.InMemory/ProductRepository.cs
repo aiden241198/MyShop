@@ -8,7 +8,7 @@ using MyShop.Core.Models;
 
 namespace MyShop.DataAccess.InMemory
 {
-    class ProductRepository
+    public class ProductRepository
     {
         ObjectCache cache = MemoryCache.Default;
         List<Product> products;
@@ -45,7 +45,7 @@ namespace MyShop.DataAccess.InMemory
             }
         }
 
-        public Product Find(String ID)
+        public Product Find(string ID)
         {
             Product product = products.Find(p => p.ID == ID);
 
@@ -64,7 +64,7 @@ namespace MyShop.DataAccess.InMemory
             return products.AsQueryable();
         }
 
-        public void Delete(String ID)
+        public void Delete(string ID)
         {
             Product productToDelete = products.Find(p => p.ID == ID);
 
