@@ -32,7 +32,7 @@ namespace MyShop.WebUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Product product )
+        public ActionResult Create(Product product)
         {
             if (!ModelState.IsValid)
             {
@@ -60,7 +60,7 @@ namespace MyShop.WebUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(Product product, string ID )
+        public ActionResult Edit(Product product, string ID)
         {
             Product productToEdit = context.Find(ID);
 
