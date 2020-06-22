@@ -11,7 +11,7 @@ using System.Web;
 
 namespace MyShop.Services
 {
-    public class BasketService
+    public class BasketService : IBasketService
     {
         IRepository<Product> productContext;
         IRepository<Basket> basketContext;
@@ -35,7 +35,7 @@ namespace MyShop.Services
                 string basketId = cookie.Value;
                 if(!string.IsNullOrEmpty(basketId))
                 {
-                    basket = basketContext.Find(basketId)
+                    basket = basketContext.Find(basketId);
                 }else
                 {
                     if (createIfNull)

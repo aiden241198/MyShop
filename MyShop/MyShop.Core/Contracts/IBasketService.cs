@@ -8,7 +8,7 @@ using System.Web;
 
 namespace MyShop.Core.Contracts
 {
-    interface IBasketService
+    public interface IBasketService
     {
         void AddToBasket(HttpContextBase httpContext, string productID);
         void RemoveFromBasket(HttpContextBase httpContext, string itemId);
